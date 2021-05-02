@@ -6,7 +6,7 @@ function App() {
     loading:true, data:[]
   })
   useEffect(() => {
-    fetch("https://randomuser.me/api/?results=20")
+    fetch("https://randomuser.me/api/?results=150")
       .then((response) => response.json())
       .then((response) => {
         setRandomUserTableData({
@@ -14,6 +14,7 @@ function App() {
           loading: false
         })
       })
+
   }, [])
 
   const columns = React.useMemo(
